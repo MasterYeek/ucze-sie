@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+  margin: 20px;
+  font-family: "Poppins";
+  background: rgb(178, 240, 204);
+}
+header{
+    max-width: 1200px;
+    margin: 30px;
+    border-bottom: 1px solid whitesmoke;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+article img, article.feature img{
+    width: 100%;
+    border: 4px solid #fff;
+}
