@@ -1,0 +1,15 @@
+header{
+position: relative;
+}
+
+.banner img{
+    max-width: 100%;
+}
+
+p{
+    position: relative;
+}
+p.witam{
+    
+    text-align: center;
+}

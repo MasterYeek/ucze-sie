@@ -1,0 +1,70 @@
+.Sum{
+    border-radius: 100px;
+    width: 120px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: relative;
+    left:350px;
+    bottom: 40px;
+
+
+}
+nav{
+    background: #333;
+    
+
+
+}
+nav li{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a{
+    //text-align: ;
+    text-decoration: none;
+    display:block;
+    padding: 10px;
+    color: white;
+    
+}
+nav a:hover{
+    background-color: grey;
+}
+.text{
+    position: relative;
+    width: 10%;
+    left: 400px;
+    font-size: 20px;
+}
+footer{
+   background: black;
+   color: white;
+position: relative;
+top: 350px;
+padding: 75px;
+margin: -10px;
+}
+
+.copy{
+    position: relative;
+    left: 200px;
+
+}
+
+@media screen and (min-width:768px){
+   
+    nav ul{
+        display: flex;
+    }
+    
+    nav li{
+        flex:1 1 0;
+    }
+
+}
+    

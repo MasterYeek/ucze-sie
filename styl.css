@@ -1,0 +1,42 @@
+h3{
+    text-align: center;
+    background-color: green;
+    text-decoration: underline;
+}
+div{
+font-family: arial;
+text-align: right;
+
+}
+
+h1{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100;
+    color: green;
+    line-height: 20px;
+   letter-spacing: 1px;
+   columns: 1;
+}
+form{
+    text-align: right;
+    font-family: Arial;
+    border-width: 4px;
+    border-style: solid;
+    border-color: red;
+    display: inline-block;
+    
+}
+ul
+{
+    font-family: arial;
+    list-style-type: square;
+    text-shadow: 2px 2px yellow;
+    border: 2px solid crimson;
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+}
+.error{
+    color: rgb(31, 228, 195);
+}
