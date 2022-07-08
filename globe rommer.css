@@ -1,0 +1,36 @@
+body{
+    background-color: aquamarine;
+    margin: 20px;
+}
+
+header{
+    max-width: 1200px;
+    margin: 40px;
+    border-bottom: 1px solid gray;
+    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.feature{
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 40px;
+}
+article img,.feature img{
+    width: 100%;
+    border: 4px solid #fff;
+    border-radius: 8px;
+}
+article p, article strong{
+    margin: 20px 10px;
+}
