@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+.head{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.head h1{
+    padding: 20px 30px;
+}
+.head a{
+    text-decoration: none;
+    grid-column: span 3;
+    
+}
