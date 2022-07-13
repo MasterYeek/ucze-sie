@@ -1,0 +1,13 @@
+body{
+    background: rgb(133, 235, 218);
+    margin: 20px;
+}
+header{
+    max-width: 1200px;
+    margin: 40px;
+    border-bottom: 1px solid grey;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
