@@ -1,4 +1,31 @@
-.box{
+
+.container{
     display: flex;
+        gap: 60px;
+}
+
+
+.box1{
+    border: 1px solid red;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
     
+
+
+.box2{
+border: 1px solid blue;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.box3{
+    border: 1px solid yellow;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
