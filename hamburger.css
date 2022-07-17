@@ -1,0 +1,63 @@
+body {
+  --color-black: #000;
+  --color-light-blue: #add8e6;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.hamburger {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-light-blue);
+  border: none;
+  border-radius: 50%;
+}
+
+.hamburger__line {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 2px;
+  background-color: var(--color-black);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hamburger__line:first-of-type {
+  transform: translate(-50%, -400%);
+}
+
+.hamburger__line:last-of-type {
+  transform: translate(-50%, 300%);
+}
+
+.hamburger__checkbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.hamburger__checkbox:checked ~ .hamburger__line {
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
