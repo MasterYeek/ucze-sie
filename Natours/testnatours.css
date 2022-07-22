@@ -41,10 +41,12 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
     left: 50%;
     color: #fff;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .heading-primary{
     text-transform: uppercase;
+    
 }
 
 
@@ -53,6 +55,7 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation: Moveinright 1s;
 }
 
 .text2{
@@ -60,4 +63,56 @@ clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17px;
+    margin-bottom: 60px;
+    animation: Moveinleft 1s;
+}
+@keyframes Moveinright{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes Moveinleft{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(1-0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.button:link,
+.button:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+}
+
+.button1{
+    background-color: #fff;
+    color: #777;
+}
+
+.button1:hover{
+    transform: translateY(-3px);
+}
+
+.button1:active{
+    transform: translateY(-1px);
 }
