@@ -13,3 +13,21 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+//Media QUery
+
+/*
+0-600px: Phone
+600-900px:tablet portrait
+900-1200px:tablet landscape
+1200-1800px: normal style
+1800+px: big desktop
+
+
+*/
+
+@mixin respond-phone{
+    @media (max-width: 600px) { @content};
+        
+    }
