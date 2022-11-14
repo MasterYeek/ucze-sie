@@ -760,10 +760,10 @@ body {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
     transition: all .5s; }
-  .story__test {
+  .story__text {
     transform: skewX(12deg); }
     @media (max-width: 37.5em) {
-      .story__test {
+      .story__text {
         transform: skewX(0); } }
   .story__caption {
     position: absolute;
@@ -947,7 +947,7 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   @media (max-width: 75em) {
     .book {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 100%), url(/img/nat-10.jpg);
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 100%), url(/img/nat-10.jpg);
       background-size: cover; } }
   @media (max-width: 56.25em) {
     .book {
