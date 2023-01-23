@@ -1,7 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    background-color: #3feb2f;
-}
+@import "base";
+@import "layout";
+@import "components";
