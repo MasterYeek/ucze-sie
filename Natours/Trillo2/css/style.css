@@ -229,8 +229,13 @@ body {
   background-color: transparent;
   cursor: pointer;
   transition: all .2s; }
+  .btn-inline__span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-Grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate  1s infinite; }
@@ -290,9 +295,12 @@ body {
   background-color: #fff;
   box-shadow: var(--shadow-dark);
   padding: 3rem;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
   .review__text {
-    margin-bottom: 2rem; }
+    z-index: 10;
+    position: relative; }
   .review__user {
     display: flex;
     align-items: center; }
@@ -316,6 +324,16 @@ body {
     color: var(--color-primary);
     font-size: 2.2rem;
     font-weight: 300; }
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.5rem;
+    left: -1rem;
+    line-height: 1;
+    font-size: 20rem;
+    color: var(--color-Grey-light-2);
+    font-family: sans-serif;
+    z-index: 1; }
 
 .container {
   max-width: 120rem;
@@ -361,4 +379,7 @@ body {
   margin-right: 4.5rem; }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
