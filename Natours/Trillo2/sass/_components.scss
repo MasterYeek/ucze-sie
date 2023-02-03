@@ -16,6 +16,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width:$bp-smallest){
+        order: 1;
+        flex: 0 0 100%;
+        
+        
+    }
+
+
     &__input{
         font-family: inherit;
         font-size: inherit;
@@ -27,6 +36,7 @@
         width: 90%;
         transition:  all .2s;
         margin-right: -3.25rem;
+
 
         &:focus{
             outline: none;
@@ -60,7 +70,7 @@
     &__icon{
         height: 2rem;
         width: 2rem;
-        fill: var(--color-Grey-light-3);
+        fill: var(--color-Grey-light-4);
 
     }
 }
@@ -134,6 +144,11 @@
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+
+    @media only screen and (max-width:$bp-medium){
+        display: flex;
+        margin: 0;
+    }
     
 
     &__link:link,
@@ -148,6 +163,17 @@
 
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width:$bp-medium){
+           justify-content: center;
+            
+        }
+
+        @media only screen and (max-width:$bp-small){
+            flex-direction: column;
+            padding: 1rem .5rem;
+        }
+        
     }
 
     &__item{
@@ -155,7 +181,16 @@
 
        &:not(last-child){
         margin-bottom: .5rem;
+        @media only screen and (max-width:$bp-medium){
+            margin: 0;
+            
+        }
        }
+
+       @media only screen and (max-width:$bp-medium){
+        flex: 1;
+        
+    }
     }
 
     &__item::before{
@@ -188,6 +223,14 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill:currentColor;
+
+        @media only screen and (max-width:$bp-small){
+            margin-right: 0;
+            margin-bottom: .5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        
     }
 }
 
@@ -196,6 +239,10 @@
     text-align: center;
     padding: 2.5rem;
     color: var(--color-Grey-light-4);
+
+    @media only screen and (max-width:$bp-medium){
+        display: none;
+    }
 }
 ////////////////////////////////////
 /// GALLERY
@@ -223,6 +270,11 @@ display: flex;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
 
+        @media only screen and (max-width:$bp-small){
+            font-size: 1.8rem;
+            padding: 1rem 2rem;
+        }
+        
     }
 
     &__stars{
@@ -261,6 +313,11 @@ display: flex;
         justify-content: center;
         flex-direction: column;
 
+        @media only screen and (max-width:$bp-small){
+            padding: 0 1.5rem;
+        }
+        
+
 
 
     }
@@ -270,12 +327,20 @@ display: flex;
         font-weight: 300;
         margin-bottom: -3px;
 
+        @media only screen and (max-width:$bp-small){
+            font-size: 1.8rem;
+        }
+        
     }
 
     &__rating-count{
         font-size: .8rem;
         text-transform: uppercase;
 
+        @media only screen and (max-width:$bp-small){
+            font-size: .5rem;
+        }
+        
 
 
     }
@@ -391,7 +456,7 @@ display: flex;
     }
 
     &__friends{
-        
+        display: flex;
 
     }
 
@@ -403,11 +468,9 @@ display: flex;
         border: 3px solid #fff;
 
         &:not(:last-child){
-            margin-right: -1.5rem;
+            margin-right: -2rem;
+
         }
-
-        
-
     }
 }
 
@@ -421,6 +484,12 @@ display: flex;
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width:$bp-medium){
+        padding: 2rem;
+        margin-bottom: 3rem;
+        
+    }
 
     &__text{
         z-index: 10;
@@ -477,5 +546,76 @@ display: flex;
         color: var(--color-Grey-light-2);
         font-family: sans-serif;
         z-index: 1;
+    }
+}
+////////////////////////////////////
+/// USER REVIEWS
+.cta{
+padding: 3.5rem 0;
+text-align: center;
+
+@media only screen and (max-width:$bp-medium){
+    padding: 2.5rem;
+    
+}
+
+&__book-now{
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+}
+
+
+////////////////////////////////////
+/// BUTTON
+
+.btn{
+    font-size: 1.5rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    & > *{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &__visible{
+        padding: 2rem 7.5rem;
+    }
+
+
+    &__invisible{
+        position: absolute;
+        padding: 2rem ;
+        left: 0;
+        top: -100%;
+        
+    }
+
+    &:hover{
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+    }
+
+    &:hover &__visible{
+        transform: translateY(100%);
+    }
+
+    &:hover  &__invisible{
+        top: 0;
+    }
+
+    &:focus{
+        outline: none;
+        animation: pulsate 1s infinite;
     }
 }
