@@ -4,26 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Facebooks</title>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <img src="#" alt="" class="logo">
-            <form action="#" class="search">
+            <div class="search">
+            <svg class="search__icon">
+                <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+             </svg>
             <input type="text" class="search__input" placeholder="Szukaj na Facebooku">
-            <button class="search__button">
-                <svg class="search__icon">
-                    <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-                </svg>
-            </button>
-        </form>
-
-        <nav class="user-nav">
-            <div class="user-nav__icon-box">
-                svg
             </div>
-        </nav>
+
+        <div class="user-main">
+            <div class="user-main__icon-box">
+            <svg class="user-main__icon">
+                <use xlink:href="img/sprite.svg#icon-home3"></use>
+            </svg>
+            <span class="invisible">Strona Główna</span>
+            </div>
+
+            <div class="user-main__icon-box">
+            <svg class="user-main__icon">
+                <use xlink:href="img/sprite.svg#icon-users"></use>
+            </svg>
+            <span class="invisible">Znajomi</span>
+            </div>
+
+            <div class="user-main__icon-box">
+            <svg class="user-main__icon">
+                <use xlink:href="img/sprite.svg#icon-play"></use>
+            </svg>
+            <span class="invisible">Watch</span>
+             </div>
+
+            <div class="user-main__icon-box">
+            <svg class="user-main__icon">
+                <use xlink:href="img/sprite.svg#icon-address-book"></use>
+            </svg>
+            <span class="invisible">Grupy</span>
+        </div>
+
+        </div>
+       
+
+
+        <div class="user-nav">
+
+            <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-list"></use>
+            </svg>
+        </div>
+
+            <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-bubble"></use>
+            </svg>
+        </div>
+
+            <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+            </svg>
+        </div>
+
+        </div>
 
 
         </header>
