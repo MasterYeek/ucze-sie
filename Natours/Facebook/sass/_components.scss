@@ -13,7 +13,7 @@ align-items: center;
     }
 
     &__input{
-        background-color: gray;
+        background-color: aliceblue;
         border: none;
         border-radius: 100px;
         height: 3rem;
@@ -35,23 +35,23 @@ align-items: center;
 
     &__icon-box{
         display: flex;
-        padding: 0 4rem;
+        justify-content: center;
        cursor: pointer;
-       height: 100%;
+       width: 13rem;
        align-items: center;
-
+        margin-right: 10rem;
 
        &:hover{
-        border: 2px solid  gray;
+        background-color: #828282;
         border-radius: 10px;
 
        }
        }
 
     &__icon{
-        width: 3rem;
-        height: 3rem;
-        fill: gray;
+        width: 4rem;
+        height: 4rem;
+        fill: #1877F2;
     
     }
 }
@@ -85,25 +85,20 @@ align-items: center;
 
 .sidebar1{
 
-max-width: 400px;
+
 font-size: 1.5rem;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+flex:0 0 30%;
 
     &__item{
      display: flex;
     list-style: none;
     margin-bottom: 1rem;
     justify-content: center;
-    transition: all .1s;
+    
 
-   
-
-    &:hover{
-        border: 2px solid gray;
-        border-radius: 20px;
-    }
     }
 
 
@@ -111,10 +106,15 @@ justify-content: space-between;
     text-decoration: none;
     color: aliceblue;
 
+    &:hover{
+        background-color: #828282;
+    
+        border-radius: 10px;
+    }
+
     }
 
  &__icon{
-    margin-right: 1rem;
     width: 3rem;
     height: 3rem;
     fill: #1877F2;
@@ -129,10 +129,15 @@ justify-content: space-between;
 .overview{
 background-color: red;
 width: 30rem;
+display: flex;
+flex: 0 0 40%;
 }
 
 .sidebar2{
 background-color: greenyellow;
+display: flex;
+margin-left: auto;
+width: 300px;
 
 &__icon{
     

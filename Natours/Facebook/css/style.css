@@ -22,7 +22,7 @@ html {
     cursor: pointer;
     fill: #1877F2; }
   .search__input {
-    background-color: gray;
+    background-color: aliceblue;
     border: none;
     border-radius: 100px;
     height: 3rem;
@@ -40,17 +40,18 @@ html {
   align-self: stretch; }
   .user-main__icon-box {
     display: flex;
-    padding: 0 4rem;
+    justify-content: center;
     cursor: pointer;
-    height: 100%;
-    align-items: center; }
+    width: 13rem;
+    align-items: center;
+    margin-right: 10rem; }
     .user-main__icon-box:hover {
-      border: 2px solid  gray;
+      background-color: #828282;
       border-radius: 10px; }
   .user-main__icon {
-    width: 3rem;
-    height: 3rem;
-    fill: gray; }
+    width: 4rem;
+    height: 4rem;
+    fill: #1877F2; }
 
 .user-nav {
   display: flex;
@@ -67,25 +68,23 @@ html {
     fill: #e7e6e6; }
 
 .sidebar1 {
-  max-width: 400px;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex: 0 0 30%; }
   .sidebar1__item {
     display: flex;
     list-style: none;
     margin-bottom: 1rem;
-    justify-content: center;
-    transition: all .1s; }
-    .sidebar1__item:hover {
-      border: 2px solid gray;
-      border-radius: 20px; }
+    justify-content: center; }
   .sidebar1__link {
     text-decoration: none;
     color: aliceblue; }
+    .sidebar1__link:hover {
+      background-color: #828282;
+      border-radius: 10px; }
   .sidebar1__icon {
-    margin-right: 1rem;
     width: 3rem;
     height: 3rem;
     fill: #1877F2; }
@@ -94,10 +93,15 @@ html {
 
 .overview {
   background-color: red;
-  width: 30rem; }
+  width: 30rem;
+  display: flex;
+  flex: 0 0 40%; }
 
 .sidebar2 {
-  background-color: greenyellow; }
+  background-color: greenyellow;
+  display: flex;
+  margin-left: auto;
+  width: 300px; }
 
 .container {
   background-color: #3E4042; }
@@ -113,5 +117,4 @@ html {
   height: 95vh;
   padding: 2.5rem 2rem;
   display: flex;
-  justify-content: space-between;
   background-color: #1c1e21; }
