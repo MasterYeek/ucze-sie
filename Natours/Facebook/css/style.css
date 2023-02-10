@@ -18,14 +18,22 @@ html {
     margin: 0 1rem;
     width: 3rem;
     height: 3rem;
-    cursor: pointer; }
+    border-radius: 50px;
+    cursor: pointer;
+    fill: #1877F2; }
   .search__input {
     background-color: gray;
     border: none;
     border-radius: 100px;
     height: 3rem;
+    width: 20rem;
     text-align: center;
     cursor: pointer; }
+
+.invisible {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  color: aliceblue; }
 
 .user-main {
   display: flex;
@@ -37,33 +45,73 @@ html {
     height: 100%;
     align-items: center; }
     .user-main__icon-box:hover {
-      background-color: #3E4042;
-      border: 2px solid;
+      border: 2px solid  gray;
       border-radius: 10px; }
   .user-main__icon {
     width: 3rem;
     height: 3rem;
-    position: relative; }
+    fill: gray; }
 
 .user-nav {
   display: flex;
-  align-self: stretch; }
-  .user-nav__icon-box {
-    display: flex;
-    align-items: center; }
-    .user-nav__icon-box:hover {
-      background-color: #3E4042; }
+  align-self: stretch;
+  align-items: center; }
+  .user-nav__icon-box:hover {
+    background-color: #3E4042; }
   .user-nav__icon {
+    display: flex;
     margin-right: 2rem;
     width: 3rem;
     height: 3rem;
-    cursor: pointer; }
+    cursor: pointer;
+    fill: #e7e6e6; }
+
+.sidebar1 {
+  max-width: 400px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .sidebar1__item {
+    display: flex;
+    list-style: none;
+    margin-bottom: 1rem;
+    justify-content: center;
+    transition: all .1s; }
+    .sidebar1__item:hover {
+      border: 2px solid gray;
+      border-radius: 20px; }
+  .sidebar1__link {
+    text-decoration: none;
+    color: aliceblue; }
+  .sidebar1__icon {
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    fill: #1877F2; }
+  .sidebar1__legal {
+    color: gray; }
+
+.overview {
+  background-color: red;
+  width: 30rem; }
+
+.sidebar2 {
+  background-color: greenyellow; }
 
 .container {
-  background-color: #18191A; }
+  background-color: #3E4042; }
 
 .header {
   display: flex;
   height: 5rem;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  background-color: #3E4042; }
+
+.content {
+  height: 95vh;
+  padding: 2.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1c1e21; }

@@ -7,8 +7,9 @@ align-items: center;
         margin: 0 1rem;
         width: 3rem;
         height: 3rem;
+        border-radius: 50px;
         cursor: pointer;
-
+        fill: #1877F2;
     }
 
     &__input{
@@ -16,11 +17,17 @@ align-items: center;
         border: none;
         border-radius: 100px;
         height: 3rem;
+        width: 20rem;
         text-align: center;
         cursor: pointer;
     }
 }
 
+.invisible{
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: aliceblue;
+}
 
 .user-main{
     display: flex;
@@ -35,19 +42,16 @@ align-items: center;
 
 
        &:hover{
-        background-color:#3E4042;
-        border: 2px solid ;
+        border: 2px solid  gray;
         border-radius: 10px;
 
        }
        }
 
-
-
     &__icon{
         width: 3rem;
         height: 3rem;
-        position: relative;
+        fill: gray;
     
     }
 }
@@ -56,11 +60,9 @@ align-items: center;
 .user-nav{
     display: flex;
     align-self: stretch;
+    align-items: center;
 
     &__icon-box{
-        display: flex;
-        align-items: center;
-    
 
     &:hover{
         background-color:#3E4042;
@@ -69,9 +71,70 @@ align-items: center;
     }
 
     &__icon{
+        display: flex;
+    
         margin-right: 2rem;
         width: 3rem;
         height: 3rem;
         cursor: pointer;
+        fill: rgb(231, 230, 230);
+
+
     }
+}
+
+.sidebar1{
+
+max-width: 400px;
+font-size: 1.5rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+
+    &__item{
+     display: flex;
+    list-style: none;
+    margin-bottom: 1rem;
+    justify-content: center;
+    transition: all .1s;
+
+   
+
+    &:hover{
+        border: 2px solid gray;
+        border-radius: 20px;
+    }
+    }
+
+
+    &__link{
+    text-decoration: none;
+    color: aliceblue;
+
+    }
+
+ &__icon{
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    fill: #1877F2;
+ }
+
+
+ &__legal{
+    color: gray
+ }
+}
+
+.overview{
+background-color: red;
+width: 30rem;
+}
+
+.sidebar2{
+background-color: greenyellow;
+
+&__icon{
+    
+}
 }
