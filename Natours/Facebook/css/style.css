@@ -93,9 +93,13 @@ html {
 
 .overview {
   background-color: red;
-  width: 30rem;
-  display: flex;
   flex: 0 0 40%; }
+
+.menu {
+  display: flex; }
+  .menu__icon {
+    height: 3rem;
+    width: 3rem; }
 
 .sidebar2 {
   background-color: greenyellow;

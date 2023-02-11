@@ -128,10 +128,25 @@ flex:0 0 30%;
 
 .overview{
 background-color: red;
-width: 30rem;
-display: flex;
 flex: 0 0 40%;
 }
+
+.menu{
+    display: flex;
+   
+
+
+    &__navigation{
+        
+    }
+
+    &__icon{
+        height: 3rem;
+        width: 3rem;
+
+    }
+}
+
 
 .sidebar2{
 background-color: greenyellow;
@@ -143,3 +158,6 @@ width: 300px;
     
 }
 }
+
+
+
