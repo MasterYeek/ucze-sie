@@ -1,9 +1,8 @@
+.search {
+    display: flex;
+    align-items: center;
 
-.search{
- display: flex;
-align-items: center;
-
-    &__icon{
+    &__icon {
         margin: 0 1rem;
         width: 3rem;
         height: 3rem;
@@ -12,7 +11,7 @@ align-items: center;
         fill: #1877F2;
     }
 
-    &__input{
+    &__input {
         background-color: aliceblue;
         border: none;
         border-radius: 100px;
@@ -20,59 +19,69 @@ align-items: center;
         width: 20rem;
         text-align: center;
         cursor: pointer;
+
+        &:hover {
+            background-color: rgba(250, 249, 249, 0.85);
+        }
     }
 }
 
-.invisible{
+.invisible {
     margin-left: 1rem;
     font-size: 1.3rem;
     color: aliceblue;
 }
 
-.user-main{
+.user-main {
     display: flex;
     align-self: stretch;
 
-    &__icon-box{
+    &__icon-box {
         display: flex;
         justify-content: center;
-       cursor: pointer;
-       width: 13rem;
-       align-items: center;
+        cursor: pointer;
+        padding: 0 1rem;
+        align-items: center;
         margin-right: 10rem;
 
-       &:hover{
-        background-color: #828282;
-        border-radius: 10px;
+        &:hover {
+            background-color: #828282;
+            border-radius: 10px;
 
-       }
-       }
+        }
+    }
 
-    &__icon{
+    &__icon {
         width: 4rem;
         height: 4rem;
         fill: #1877F2;
-    
+
+    }
+
+    .invisible {
+        margin-left: 1rem;
+        font-size: 1.3rem;
+        color: aliceblue;
     }
 }
 
 
-.user-nav{
+.user-nav {
     display: flex;
     align-self: stretch;
     align-items: center;
 
-    &__icon-box{
+    &__icon-box {
 
-    &:hover{
-        background-color:#3E4042;
+        &:hover {
+            background-color: #3E4042;
 
-       }
+        }
     }
 
-    &__icon{
+    &__icon {
         display: flex;
-    
+
         margin-right: 2rem;
         width: 3rem;
         height: 3rem;
@@ -83,81 +92,233 @@ align-items: center;
     }
 }
 
-.sidebar1{
+.sidebar1 {
 
 
-font-size: 1.5rem;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-flex:0 0 30%;
-
-    &__item{
-     display: flex;
-    list-style: none;
-    margin-bottom: 1rem;
-    justify-content: center;
-    
-
-    }
-
-
-    &__link{
-    text-decoration: none;
-    color: aliceblue;
-
-    &:hover{
-        background-color: #828282;
-    
-        border-radius: 10px;
-    }
-
-    }
-
- &__icon{
-    width: 3rem;
-    height: 3rem;
-    fill: #1877F2;
- }
-
-
- &__legal{
-    color: gray
- }
-}
-
-.overview{
-background-color: red;
-flex: 0 0 40%;
-}
-
-.menu{
+    font-size: 1.5rem;
     display: flex;
-   
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 30%;
+
+    &__item {
+        display: flex;
+        list-style: none;
+
+        margin-bottom: 1rem;
+        justify-content: center;
 
 
-    &__navigation{
-        
     }
 
-    &__icon{
-        height: 3rem;
+
+    &__link {
+        text-decoration: none;
+        color: aliceblue;
+        padding: 0 2rem;
+
+        &:hover {
+            background-color: #828282;
+
+            border-radius: 10px;
+        }
+
+    }
+
+    &__icon {
         width: 3rem;
+        height: 3rem;
+        fill: #1877F2;
+    }
 
+
+    &__legal {
+        color: gray
     }
 }
 
+.overview {
+    flex: 0 0 40%;
+    background-color: red;
 
-.sidebar2{
-background-color: greenyellow;
-display: flex;
-margin-left: auto;
-width: 300px;
 
-&__icon{
-    
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        background-color: #3E4042;
+        border: 2px solid;
+        border-radius: 15px;
+        height: 30vh;
+
+
+
+
+        &__navigation {
+            display: flex;
+            font-size: 1.3rem;
+            margin-top: 1rem;
+
+        }
+
+        &__icon {
+            height: 3rem;
+            width: 3rem;
+            fill: #1877F2;
+
+        }
+
+        &__text {
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 1rem;
+            color: aliceblue;
+        }
+
+    }
+
+
+    .timeline {
+        margin-top: 1rem;
+        background-color: #3E4042;
+        border-radius: 15px;
+        border: 2px solid;
+        margin-bottom: 1rem;
+
+
+
+        &__navigation {
+            display: flex;
+            margin-top: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            cursor: pointer;
+
+        }
+
+        &__navigation2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+
+        }
+
+        &__icon-box {
+            display: flex;
+            align-items: center;
+            margin: 0 1rem;
+        }
+
+        &__type {
+            padding: 1rem;
+            padding-right: 50rem;
+            border-radius: 20px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(250, 249, 249, 0.85);
+            }
+        }
+
+        &__icon {
+            height: 3rem;
+            width: 3rem;
+            fill: #1877F2;
+        }
+
+        &__icon1 {
+            height: 3rem;
+            width: 3rem;
+            fill: rgb(218, 18, 18);
+        }
+
+        &__icon2 {
+            height: 3rem;
+            width: 3rem;
+            fill: green;
+        }
+
+        &__icon3 {
+            height: 3rem;
+            width: 3rem;
+            fill: yellow;
+        }
+
+        &__text {
+            font-weight: 400;
+            font-size: 1.3rem;
+            margin-left: 1rem;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+    }
+
+    .timeline2{
+        background-color: #3E4042;
+        border-radius: 15px;
+        border: 2px solid;
+        display: flex;
+
+
+        &__icon-box{
+        }
+
+        &__navigation {
+      
+
+        }
+
+        &__user-icon{
+            height: 4rem;
+            width: 4rem;
+        }
+
+        &__edits{ 
+            
+            
+        }
+
+        &__edit-icon{
+            height: 3rem;
+            width: 3rem;
+            margin-left: auto;
+        }
+
+        &__text {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding: 1rem 1rem;
+            margin-bottom: 1rem;
+            color: gray;
+            border-bottom: 1px solid gray;
+
+        }
+
+        &__icon {
+            height: 2rem;
+            width: 2rem
+        }
+
+        &__paragraph {}
+
+        &__info {}
+
+        &__ptag {}
+
+        &__likes {}
+
+        &__rating {}
+
+
+
+    }
+
+
+
+    .sidebar2 {
+        background-color: greenyellow;
+    }
 }
-}
-
-
-

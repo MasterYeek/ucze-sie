@@ -29,6 +29,8 @@ html {
     width: 20rem;
     text-align: center;
     cursor: pointer; }
+    .search__input:hover {
+      background-color: rgba(250, 249, 249, 0.85); }
 
 .invisible {
   margin-left: 1rem;
@@ -42,7 +44,7 @@ html {
     display: flex;
     justify-content: center;
     cursor: pointer;
-    width: 13rem;
+    padding: 0 1rem;
     align-items: center;
     margin-right: 10rem; }
     .user-main__icon-box:hover {
@@ -52,6 +54,10 @@ html {
     width: 4rem;
     height: 4rem;
     fill: #1877F2; }
+  .user-main .invisible {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: aliceblue; }
 
 .user-nav {
   display: flex;
@@ -80,7 +86,8 @@ html {
     justify-content: center; }
   .sidebar1__link {
     text-decoration: none;
-    color: aliceblue; }
+    color: aliceblue;
+    padding: 0 2rem; }
     .sidebar1__link:hover {
       background-color: #828282;
       border-radius: 10px; }
@@ -92,20 +99,103 @@ html {
     color: gray; }
 
 .overview {
-  background-color: red;
-  flex: 0 0 40%; }
-
-.menu {
-  display: flex; }
-  .menu__icon {
-    height: 3rem;
-    width: 3rem; }
-
-.sidebar2 {
-  background-color: greenyellow;
-  display: flex;
-  margin-left: auto;
-  width: 300px; }
+  flex: 0 0 40%;
+  background-color: red; }
+  .overview .menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #3E4042;
+    border: 2px solid;
+    border-radius: 15px;
+    height: 30vh; }
+    .overview .menu__navigation {
+      display: flex;
+      font-size: 1.3rem;
+      margin-top: 1rem; }
+    .overview .menu__icon {
+      height: 3rem;
+      width: 3rem;
+      fill: #1877F2; }
+    .overview .menu__text {
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 1rem;
+      color: aliceblue; }
+  .overview .timeline {
+    margin-top: 1rem;
+    background-color: #3E4042;
+    border-radius: 15px;
+    border: 2px solid;
+    margin-bottom: 1rem; }
+    .overview .timeline__navigation {
+      display: flex;
+      margin-top: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+      cursor: pointer; }
+    .overview .timeline__navigation2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem; }
+    .overview .timeline__icon-box {
+      display: flex;
+      align-items: center;
+      margin: 0 1rem; }
+    .overview .timeline__type {
+      padding: 1rem;
+      padding-right: 50rem;
+      border-radius: 20px;
+      cursor: pointer; }
+      .overview .timeline__type:hover {
+        background-color: rgba(250, 249, 249, 0.85); }
+    .overview .timeline__icon {
+      height: 3rem;
+      width: 3rem;
+      fill: #1877F2; }
+    .overview .timeline__icon1 {
+      height: 3rem;
+      width: 3rem;
+      fill: #da1212; }
+    .overview .timeline__icon2 {
+      height: 3rem;
+      width: 3rem;
+      fill: green; }
+    .overview .timeline__icon3 {
+      height: 3rem;
+      width: 3rem;
+      fill: yellow; }
+    .overview .timeline__text {
+      font-weight: 400;
+      font-size: 1.3rem;
+      margin-left: 1rem;
+      color: aliceblue;
+      cursor: pointer; }
+  .overview .timeline2 {
+    background-color: #3E4042;
+    border-radius: 15px;
+    border: 2px solid;
+    display: flex; }
+    .overview .timeline2__user-icon {
+      height: 4rem;
+      width: 4rem; }
+    .overview .timeline2__edit-icon {
+      height: 3rem;
+      width: 3rem;
+      margin-left: auto; }
+    .overview .timeline2__text {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 1rem 1rem;
+      margin-bottom: 1rem;
+      color: gray;
+      border-bottom: 1px solid gray; }
+    .overview .timeline2__icon {
+      height: 2rem;
+      width: 2rem; }
+  .overview .sidebar2 {
+    background-color: greenyellow; }
 
 .container {
   background-color: #3E4042; }
@@ -118,7 +208,7 @@ html {
   background-color: #3E4042; }
 
 .content {
-  height: 95vh;
+  height: 150vh;
   padding: 2.5rem 2rem;
   display: flex;
   background-color: #1c1e21; }
