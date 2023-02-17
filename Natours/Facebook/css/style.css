@@ -47,6 +47,9 @@ html {
     padding: 0 1rem;
     align-items: center;
     margin-right: 10rem; }
+    @media only screen and (max-width: 77.1875em) {
+      .user-main__icon-box {
+        margin-right: 0; } }
     .user-main__icon-box:hover {
       background-color: #828282;
       border-radius: 10px; }
@@ -74,16 +77,13 @@ html {
     fill: #e7e6e6; }
 
 .sidebar1 {
-  flex: 0 0 30%;
+  flex: 1;
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media only screen and (max-width: 90em) {
-    .sidebar1 {
-      flex: 0 0 20%;
-      font-size: 1.7rem;
-      margin-top: 1rem; } }
+  .sidebar1__navigation {
+    display: flex; }
   .sidebar1__item {
     display: flex;
     list-style: none;
@@ -105,10 +105,7 @@ html {
     color: gray; }
 
 .overview {
-  flex: 0 0 20%; }
-  @media only screen and (max-width: 90em) {
-    .overview {
-      flex: 0 0 10%; } }
+  flex: 0; }
   .overview .menu {
     display: flex;
     justify-content: space-around;
@@ -260,19 +257,27 @@ html {
       cursor: pointer; }
 
 .panel {
-  width: 60rem;
-  text-align: right; }
-  @media only screen and (max-width: 90em) {
-    .panel {
-      margin-left: 5rem; } }
+  flex: 1; }
   .panel__kontakty {
+    display: flex;
+    justify-content: center;
     padding: 1rem; }
+    @media only screen and (max-width: 85.625em) {
+      .panel__kontakty {
+        padding: 0; } }
+  .panel__icons {
+    margin-left: auto; }
   .panel__kontakt {
+    margin-left: 10rem;
     font-size: 1.7rem;
     font-weight: 400;
     color: aliceblue; }
+    @media only screen and (max-width: 85.625em) {
+      .panel__kontakt {
+        margin-left: 1rem; } }
   .panel__box {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 1.5rem; }
   .panel__icon {
@@ -282,7 +287,11 @@ html {
     fill: gray; }
   .panel__users {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
+    @media only screen and (max-width: 77.1875em) {
+      .panel__users {
+        align-items: flex-start; } }
   .panel__img {
     height: 3.5rem;
     width: 3.5rem;
