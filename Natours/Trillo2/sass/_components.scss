@@ -107,7 +107,7 @@
     &__icon{
         height: 2.25rem;
         width: 2.25rem;
-        fill: var(--color-Grey-dark-2);
+        fill: var(--color-Grey-dark-4);
 
     }
 
@@ -430,14 +430,19 @@ display: flex;
         margin-right: .7rem;
 
         //older browsers
-       // background-image: url(../img/chevron-thin-right.svg);
-        //background-size: cover;
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
 
 
         //new browsers = masks
-        background-color: var(--color-primary);
+        @supports (-webkit-mask-image: url()) or (-webkit-mask-image:url()) {
+            background-color: var(--color-primary);
         -webkit-mask-image: url(../img/chevron-thin-right.svg);
         -webkit-mask-size:cover;
+        mask-image: url(../img/chevron-thin-right.svg);mask-size:cover;
+        mask-size:cover;
+        background-image: none;
+        }
     }
    
 
