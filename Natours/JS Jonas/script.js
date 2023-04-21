@@ -38,7 +38,6 @@ console.log(typeof year);
 
 year = 1991;
 console.log(typeof year);
-*/
 
 //math opeartors
 const now = 2037;
@@ -64,3 +63,21 @@ console.log(x);
 
 console.log(agetom > agemaja); // > < >= <=
 console.log(agemaja >= 18);
+
+
+
+const now = 2037;
+const agetom = now - 1992;
+const agemaja = now - 2018;
+
+console.log(now - 1991 > now - 2018);
+
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x, y);
+
+const averageage = (agetom + agemaja) / 2;
+
+console.log(agetom, agemaja, averageage);
+
+*/
