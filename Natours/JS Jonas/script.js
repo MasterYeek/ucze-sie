@@ -80,4 +80,101 @@ const averageage = (agetom + agemaja) / 2;
 
 console.log(agetom, agemaja, averageage);
 
+const firstname = "tomasz";
+const job = "teacher";
+const birthyear = 1991;
+const year = 2037;
+
+const tomasz =
+  "I'm, " +
+  firstname +
+  " , a " +
+  (year - birthyear) +
+  " years old " +
+  job +
+  " ! ";
+console.log(tomasz);
+
+const tomasznew = `I'm ${firstname}, a ${year - birthyear} year old ${job} !`;
+console.log(tomasznew);
+
+
+
+const age = 15;
+//const isOldEnough = age >= 18;
+
+if (age >= 18) {
+  console.log("Sarah can start driving  license 👍");
+} else {
+  const yearsleft = 18 - age;
+  console.log(`sarah is too young. wait another ${yearsleft} years :)`);
+}
+
+const rokurodzenia = 1993;
+
+let century;
+if (rokurodzenia <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
+
+
+// TYPE CONVERSION
+const inputYear = "1993";
+console.log(Number(inputYear));
+console.log(Number(inputYear) + 18);
+
+//TYPE COERCION
+console.log("I am " + 23 + " years old");
+console.log("23" - "10" + 3);
+
+let n = "1" + 1; //11
+n = n - 1;
+console.log(n);
+
+
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Tomasz"));
+console.log(Boolean({}));
+
+const money = 0;
+if (money) {
+  console.log("Dont spend it all");
+} else {
+  console.log("You should get a job!");
+}
+
+let height;
+if (height) {
+  console.log("Yay is defined!");
+} else {
+  console.log("Height is undefined");
+}
+
+
+
+const age = 18;
+if (age === 18) console.log("You just became an adult (strict");
+
+if (age == 18) console.log("You just became and adult (looose)");
+
+const favourite = Number(prompt("What's your favourite number?"));
+console.log(favourite);
+
+if (favourite === 23) {
+  console.log("cool ! 23 is amazing number");
+} else if (favourite === 7) {
+  console.log("7 is also a cool number");
+} else if (favourite === 9) {
+  console.log("9 is also a cool number");
+} else {
+  console.log("Number is not 23 or 7 or 9");
+}
+
+if (favourite !== 23) console.log("Why not 23");
+
 */
