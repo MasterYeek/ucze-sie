@@ -177,4 +177,53 @@ if (favourite === 23) {
 
 if (favourite !== 23) console.log("Why not 23");
 
+
+const hasDriverlicense = true;
+const hasGoodVision = true;
+
+console.log(hasDriverlicense && hasGoodVision);
+console.log(hasDriverlicense || hasGoodVision);
+console.log(!hasDriverlicense);
+
+if (hasDriverlicense && hasGoodVision) {
+  console.log("Sarah is able to drive!");
+} else {
+  console.log("Someone else should drive..");
+}
+
+const isTired = false;
+console.log(hasDriverlicense && hasGoodVision && !isTired);
+
+const day = "Poniedzialek";
+
+switch (day) {
+  case "Poniedzialek":
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break;
+  case "tuesday":
+    console.loh("Prepare throey videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default:
+    console.log("not a valid day!");
+}
+
+const dzien = "poniedzialek";
+
+if (dzien === "poniedzialek") {
+  console.log("to jest poniedzialek");
+} else if (dzien === "wednesday") {
+  console.log("to nie jest poniedzialek");
+}
 */

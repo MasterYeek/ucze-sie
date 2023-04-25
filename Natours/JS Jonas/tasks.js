@@ -94,7 +94,7 @@ if (BMImark > BMIjohn) {
 
 console.log(`Mark's BMI ${BMImark} is higher than Jhon's ${BMIjohn}!`);
 
-*/
+
 
 const numNeighbours = Number(
   prompt("How many neighbour countries does your country have?")
@@ -107,4 +107,87 @@ if (numNeighbours === 1) {
   console.log("More than 1 border in case");
 } else {
   console.log("No borders");
+}
+
+
+
+
+const country = "Portugal";
+const language = "english";
+const population = 32;
+const isIsland = false;
+
+if (language === "english" && population < 50 && !isIsland) {
+  console.log(`You should live in ${country}`);
+} else {
+  console.log(`${country} does not meet your criteria`);
+}
+
+          MOJE
+const dolphins1 = 96;
+const dolphins2 = 108;
+const dolphins3 = 89;
+
+const koalas1 = 69;
+const koalas2 = 91;
+const koalas3 = 110;
+
+const Dolpscore = (dolphins1, dolphins2, dolphins3) / 3;
+const koalascore = (koalas1, koalas2, koalas3) / 3;
+console.log(Dolpscore, koalascore);
+
+const minimunscore = 100;
+if (Dolpscore === 100) {
+  console.log("Dolphins Trophy");
+} else if (Dolpscore > koalascore) {
+  console.log("Dolp Wins");
+} else {
+  console.log("Dolp lose");
+}
+
+if (Dolpscore > koalascore) {
+ console.log("dolpscore WINS");
+} else if (Dolpscore === koalascore) {
+console.log("Its a Draw");
+} else {
+console.log("Koalas WiN");
+}
+
+//JONAS
+
+const scoredolphins = (96 + 108 + 89) / 3;
+const scorekoalas = (88 + +110) / 3;
+console.log(scoredolphins, scorekoalas);
+
+if (scoredolphins > scorekoalas && scoredolphins >= 100) {
+  console.log(`Dolphins win`);
+} else if (scorekoalas > scoredolphins && scorekoalas >= 100) {
+  console.log(`koalas win`);
+} else if (
+  scoredolphins === scorekoalas &&
+  scoredolphins >= 100 &&
+  scorekoalas >= 100
+) {
+  console.log(`both win`);
+} else {
+  console.log("no one wins the tropyu");
+}
+*/
+const langague = "polska";
+
+switch (langague) {
+  case "chinese":
+  case "madarin":
+    console.log("MOST number ofd native speakers!");
+    break;
+  case "spanish":
+    console.log("2nd place in number of native speakers");
+    break;
+  case "english":
+    console.log("3rd place");
+    break;
+  case "hindi":
+    console.log("Number 4");
+  case "polska":
+    console.log("polska win");
 }
