@@ -51,19 +51,155 @@ function describePopulation(country, population) {
 }
 
 console.log(describePopulation("Portugal", 10));
-*/
 
 
-const DolphinsAverage = (calcaverage) => (44 + 23 + 71) / 3
-const Koalas = (calcaverage) => (85 + 54 + 41) / 3
 
-function checkwinner (avgdolphins, avgkoalas)
-const scoredol = DolphinsAverage(avgdolphins);
-const scorekoal = Koalas(avgkoalas);
 
-if (scoredol > scorekoal){
-  console.log( `Dolphins win (${avgdolphins} vs ${avgkoalas} )` );
-  return scoredol  
-}else{
-  console.log(`Koalas win ${avgkoalas} vs ${avgdolphins}` );
+
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+console.log(calcAverage(44, 23, 71));
+
+const scoreDolphins = calcAverage(85, 54, 41);
+const scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+
+function checkwinner(avgdolphins, avgkoalas) {
+  if (avgdolphins >= 2 * avgkoalas) {
+    console.log(`Dolphins win (${avgdolphins} vs ${avgkoalas})`);
+  } else if (avgkoalas >= 2 * avgdolphins) {
+    console.loge(`Koalas win (${avgkoalas} vs ${avgdolphins})`);
+  } else {
+    console.log(`No team wins...`);
+  }
 }
+
+checkwinner(scoreDolphins, scoreKoalas);
+
+const populations = [1441, 42, 35, 70];
+console.log(populations.length === 4);
+
+function percentageofWorld(population) {
+  return (population / 7900) * 100;
+}
+
+const percentages = [
+  percentageofWorld(populations[0]),
+  percentageofWorld(populations[1]),
+  percentageofWorld(populations[2]),
+  percentageofWorld(populations[3]),
+];
+console.log(percentages);
+
+
+const neighbours = ["Germany", "Czech", "Ukraine"];
+console.log(neighbours);
+
+neighbours.push("Utopia");
+console.log(neighbours);
+
+neighbours.pop("Utopia");
+console.log(neighbours);
+
+if (neighbours.includes("Germany")) console.log("Central Eropean country");
+
+neighbours[neighbours.indexOf("Germany")] = "Republic of Germany";
+
+console.log(neighbours);
+
+const caltip = (bill) => (bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2);
+
+const bills = [125, 555, 44];
+
+const tips = [caltip(bills[0]), caltip(bills[1]), caltip(bills[2])];
+
+console.log(bills, tips);
+
+//With Bonus:
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
+
+const myCountry = {
+  country: "Poland",
+  capital: "Warszawa",
+  langauge: "Polski",
+  population: "42",
+};
+
+const object = {
+  country: "Finland",
+  population: "6",
+  neighbours: ["Poland", "Sweden", "Germany"],
+  capital: "Helsinki",
+};
+
+console.log(
+  `${object.country} has ${object.population} milion finish speaking people, 3 ${object.neighbours.length} countries and a capital called ${object.capital}`
+  );
+  
+  object.population += 2;
+  console.log(object.population);
+  
+  object.population -= 2;
+  console.log(object.population);
+  
+  
+  country: "Poland",
+  capital: "Warszawa",
+  langauge: "Polski",
+  neighbours: ["Poland", "Sweden", "Germany"],
+  population: "42",
+  
+  describe: function () {
+    console.log(
+      `${this.country} has ${this.population} milions polish-speaking people, and a capital called ${this.capital}`
+      );
+    },
+    
+    checkIsland: function () {
+      this.isIsland = !Boolean(this.neighbours.length);
+    },
+  };
+  
+  myCountry.describe();
+  myCountry.checkIsland();
+  console.log(myCountry);
+  
+  const myCountry = {
+   */
+
+const mark = {
+  fullname: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  fullname: "Jhon Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMi: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+if (mark.calcBMi > john.calcBMi) {
+  console.log(
+    `Mark Miller's BMI (${mark.calcBMi}) is higher than Jhon Smith (${john.calcBMi}) `
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(`Jhon Smith's BMI (${mark.calcBMi}) is 
+higher than Jhon Miller (${john.calcBMi}) `);
+}
+console.log(mark.calcBMi());
+
+console.log(john.calcBMi());
