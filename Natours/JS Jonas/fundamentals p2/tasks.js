@@ -168,38 +168,137 @@ console.log(
   console.log(myCountry);
   
   const myCountry = {
-   */
+    
+    const mark = {
+      fullname: "Mark Miller",
+      mass: 78,
+      height: 1.69,
+      
+      calcBMi: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+      },
+    };
+    
+    const john = {
+      fullname: "Jhon Smith",
+      mass: 92,
+      height: 1.95,
+      
+      calcBMi: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+      },
+    };
+    
+    if (mark.calcBMi > john.calcBMi) {
+      console.log(
+        `Mark Miller's BMI (${mark.calcBMi}) is higher than Jhon Smith (${john.calcBMi}) `
+        );
+      } else if (john.bmi > mark.bmi) {
+        console.log(`Jhon Smith's BMI (${mark.calcBMi}) is 
+        higher than Jhon Miller (${john.calcBMi}) `);
+      }
+      console.log(mark.calcBMi());
+      
+      console.log(john.calcBMi());
 
-const mark = {
-  fullname: "Mark Miller",
-  mass: 78,
-  height: 1.69,
+      
+      for (let rep = 1; rep <= 50; rep++) {
+        console.log(`Vote number ${rep} is currently voting`);
+      }
+      
 
-  calcBMi: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
+// console.log(`lifting weights repetition 1`);
+// console.log(`lifting weights repetition`);
+// console.log(`lifting weights repetition`);
+// console.log(`lifting weights repetition`);
+// console.log(`lifting weights repetition`);
+// console.log(`lifting weights repetition`);
+// console.log(`lifting weights repetition`);
 
-const john = {
-  fullname: "Jhon Smith",
-  mass: 92,
-  height: 1.95,
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`lifting weights repetition ${rep}`);
 
-  calcBMi: function () {
-    this.bmi = this.mass / this.height ** 2;
-    return this.bmi;
-  },
-};
-
-if (mark.calcBMi > john.calcBMi) {
-  console.log(
-    `Mark Miller's BMI (${mark.calcBMi}) is higher than Jhon Smith (${john.calcBMi}) `
-  );
-} else if (john.bmi > mark.bmi) {
-  console.log(`Jhon Smith's BMI (${mark.calcBMi}) is 
-higher than Jhon Miller (${john.calcBMi}) `);
-}
-console.log(mark.calcBMi());
-
-console.log(john.calcBMi());
+  
+  const populations = [1441, 42, 35, 70];
+  console.log(populations.length === 4);
+  
+  function percentageofWorld(population) {
+    return (population / 7900) * 100;
+  }
+  
+  const percentages = [
+    percentageofWorld(populations[0]),
+    percentageofWorld(populations[1]),
+    percentageofWorld(populations[2]),
+    percentageofWorld(populations[3]),
+  ];
+  console.log(percentages);
+  
+  const percentage2 = [];
+  for (let i = 0; i < populations.length; i++) {
+    const perc = percentageofWorld(populations[i]);
+    percentage2.push(perc);
+  }
+  console.log(percentage2);
+  
+  
+  const listOfNeighbours = [
+    ["Canada", "Mexico"],
+    ["Spain"],
+    ["Norway", "Sweden", "Russia"],
+  ];
+  
+  for (let i = 0; i < listOfNeighbours.length; i++)
+  for (let y = 0; y < listOfNeighbours[i].length; y++)
+  console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+  
+  const populations = [1441, 42, 35, 70];
+  function percentageofWorld(population) {
+    return (population / 7900) * 100;
+  }
+  const percentages = [
+    percentageofWorld(populations[0]),
+    percentageofWorld(populations[1]),
+    percentageofWorld(populations[2]),
+    percentageofWorld(populations[3]),
+  ];
+  
+  const percentage3 = [];
+  let i = 0;
+  while (i < populations.length) {
+    const perc = percentageofWorld(populations[i]);
+    percentage3.push(perc);
+    i++;
+  }
+  console.log(percentage3);
+  
+  
+  const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+  
+  const tips = [];
+  
+  const totals = [];
+  
+  const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  };
+  for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]);
+  }
+  
+  console.log(bills, tips, totals);
+  
+  const calcAverage = function (arr) {
+    let = sum - 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum = sum + arr[i];
+    }
+    console.log(sum);
+  };
+  calcAverage([2, 3, 6]);
+  
+  */

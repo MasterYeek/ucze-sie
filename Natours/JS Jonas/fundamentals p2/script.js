@@ -239,4 +239,89 @@ console.log(tom.calcAge(1993));
 
 console.log(tom.getSummary());
 
-*/
+
+
+
+// const tom = [
+  //   "tom",
+  //   "Świerczek",
+  //   2023 - 1993,
+  //   "user",
+  //   ["Miechael", "Peter", "Steven"],
+  //   true,
+  //   false,
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < tom.length; i++) {
+  //   console.log(tom[i], typeof tom[1]);
+  
+  //   types[i] = typeof tom[i];
+  // }
+  
+  // console.log(types);
+  
+  // const years = [1991, 2007, 1969, 2020];
+  
+  // const ages = [];
+  
+  // for (let i = 0; i < years.length; i++) {
+    //   //ages.push(2023 - years[i]);
+    //   ages[i] = 2023 - years[i];
+    // }
+    // console.log(ages);
+    
+    // console.log(`ONLY STRINGS`);
+    // for (let i = 0; i < tom.length; i++) {
+      //   if (typeof tom[i] !== "string") continue;
+      
+      //   console.log(tom[i], typeof tom[1]);
+      // }
+      
+      // console.log(`BREAK WITH NUMBER`);
+      // for (let i = 0; i < tom.length; i++) {
+        //   if (typeof tom[i] === "number") break;
+        
+        //   console.log(tom[i], typeof tom[1]);
+        // }
+        
+        const tom = [
+          "tom",
+          "Świerczek",
+          2023 - 1993,
+          "user",
+          ["Miechael", "Peter", "Steven"],
+        ];
+        
+for (let i = tom.length - 1; i >= 0; i--) {
+  console.log(i, tom[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`=====Starting exercise ${exercise}`);
+  
+  for (let rep = 1; rep < 6; rep++)
+  console.log(`===Exercise ${exercise} weight repetition ${rep}`);
+}
+
+// for (let rep = 1; rep <= 10; rep++) {
+  //   console.log(`lifting weights repetition ${rep}`);
+  // }
+  
+  // let rep = 1;
+  // while (rep <= 10) {
+    //   console.log(`lifting weights repetition ${rep}`);
+    //   rep++;
+    // }
+    
+    let dice = Math.trunc(Math.random() * 6) + 1;
+    console.log(dice);
+    
+    while (dice !== 6) {
+      console.log(`You rolled a ${dice}`);
+      dice = Math.trunc(Math.random() * 6) + 1;
+      if (dice === 6) console.log(`loop is about to end`);
+    }
+    
+    */
