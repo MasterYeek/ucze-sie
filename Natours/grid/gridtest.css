@@ -1,0 +1,39 @@
+.container{
+    background-color: red;
+    height: 100vh;
+    display: grid;
+    padding: 20px;
+    grid-template-columns: repeat(3, 4fr);
+    grid-auto-flow: repeat(5, 1fr);
+}
+
+.itembox-1{
+    background-color: aqua;
+}
+
+.itembox-2{
+    background-color: rgb(130, 20, 198);
+}
+.itembox-3{
+    background-color: rgb(88, 226, 60);
+}
+
+.itembox-4{
+    background-color: rgb(241, 92, 18);
+}
+
+.itembox-5{
+    background-color: rgb(255, 0, 166);
+}
+
+.itembox-6{
+    background-color: rgb(13, 0, 255);
+}
+
+p, h1{
+    color: azure;
+}
+
+
+
+
