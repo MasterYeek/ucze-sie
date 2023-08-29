@@ -53,6 +53,45 @@ const restaurant = {
   },
 };
 
+const rest1 = {
+  name: 'Capriciosa',
+  numGuests: 20,
+};
+const rest2 = {
+  name: 'La piazza',
+  owner: 'Giovanni Giorgio',
+};
+// OR assignment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+// SAME
+// rest1.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// NULISH operator
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+// AND operator
+//rest2.owner = rest2.owner && '<ANONYMOUS<';
+// SAME
+rest2.owner &&= '<ANONYMOUS<';
+
+console.log(rest1);
+console.log(rest2);
+
+/*
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+/*
 // 1) destructuing
 const arr2 = [1, 2, ...[3, 4]];
 
