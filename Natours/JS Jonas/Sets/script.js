@@ -35,3 +35,8 @@ console.log(
 //How many letters in Array
 
 console.log(new Set("Tomasz").size);
+
+let arr = [1, 2, 2, 3, 2, 3, 4, 5, 4, 1, 4, 5];
+
+let arrUnique = [...new Set(arr)];
+console.log(arrUnique);
