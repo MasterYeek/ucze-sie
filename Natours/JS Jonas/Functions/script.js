@@ -75,9 +75,103 @@ transformer('JavaScript is the best!', upperFirstWord);
 transformer('JavaScript is the best!', oneWord);
 
 // JS uses callbacks all the time
-const high5 = function () {
-  console.log('👍');
-};
-document.body.addEventListener('click', high5);
+// const high5 = function () {
+//   console.log('👍');
+// };
+// document.body.addEventListener('click', high5);
 
-['Tom', 'Marta', 'Adam'].forEach(high5);
+// ['Tom', 'Marta', 'Adam'].forEach(high5);
+
+// const greet = function (greeting) {
+//   return function (name) {
+//     console.log(`${greeting} ${name}`);
+//   };
+// };
+
+//SAME
+// Arrow function
+const greet = greeting => name => console.log(`${greeting} ${name}`);
+
+const greeterHey = greet('Hey');
+greeterHey('TOm');
+greeterHey('Steven');
+
+greet('Hello')('Tom');
+
+const Lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
+    );
+    this.bookings.push({ flgiht: `${this.iataCode} ${flightNum}`, name });
+  },
+};
+
+Lufthansa.book(239, 'Tom swierczek');
+Lufthansa.book(635, 'Jon swierczek');
+console.log(Lufthansa);
+
+const Eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = Lufthansa.book;
+
+// Does not work
+//book(23, 'Sarah Williams')
+
+//CALL method
+book.call(Eurowings, 23, 'Sarah Williams ');
+console.log(Eurowings);
+
+book.call(Lufthansa, 239, 'Mary cooper');
+console.log(Lufthansa);
+
+// Apply Method
+// not used
+const Flightdata = [573, 'Geroge cooper'];
+book.apply(Eurowings, Flightdata);
+console.log(Eurowings);
+
+//bind method
+
+const bookEW = book.bind(Eurowings);
+bookEW(28, 'Steven Williams');
+
+const bookEW23 = book.bind(Eurowings, 23);
+bookEW23('Tom swierczek');
+bookEW23('Martha Cooper');
+
+//With addEventListener
+Lufthansa.planes = 300;
+Lufthansa.buyPlane = function () {
+  console.log(this);
+  this.planes++, console.log(this.planes);
+};
+document
+  .querySelector('.buy')
+  .addEventListener('click', Lufthansa.buyPlane.bind(Lufthansa));
+
+//Partial application
+
+// const addTax = (rate, value) => value + value * rate;
+// console.log(addTax(0.1, 200));
+
+// const addVat = addTax.bind(null, 0.23);
+
+// console.log(addVat(100));
+
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+const addVat2 = addTaxRate(0.23);
+
+console.log(addVat2(100));
+console.log(addVat2(23));
