@@ -11,16 +11,28 @@ const LOG_EVENT_PLAYER_MONSTER_ATTACK = "monster_attack";
 const LOG_EVENT_PLAYER_HEAL = "player_heal";
 const LOG_EVENT_GAME_OVER = "game_over";
 
-const enteredValue = prompt("Maximum life for you and the monster.", "100");
+function getMaxLifeValues() {
+  const enteredValue = prompt("Maximum life for you and the monster.", "100");
 
-let hasBonusLife = true;
-let chosenMaxLife = parseInt(enteredValue);
-let battleLog = [];
-
-if (isNaN(chosenMaxLife) || chosenMaxLife <= 0) {
-  chosenMaxLife = 100;
+  const parsedValue = parseInt(enteredValue);
+  if (isNaN(parsedValue) || parsedValue <= 0) {
+    throw { message: "invalid user input not a number!" };
+  }
+  return parsedValue;
 }
 
+let chosenMaxLife;
+try {
+  chosenMaxLife = getMaxLifeValues();
+} catch (error) {
+  console.log(error);
+  chosenMaxLife = 100;
+  alert("You entered wrong. defulat  = 100");
+}
+let battleLog = [];
+let lastLoggedEntry;
+
+let hasBonusLife = true;
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
 
@@ -33,6 +45,11 @@ function writeToLog(event, value, monsterHealth, playerHealth) {
     finalMonsterHealth: monsterHealth,
     finalPlayerHealth: playerHealth,
   };
+
+  switch (event) {
+    case LOG_EVENT_PLAYER_ATTACK:
+      logEntry.target = "Monster";
+  }
   if (event === LOG_EVENT_PLAYER_ATTACK) {
     logEntry = {
       event: event,
@@ -170,7 +187,7 @@ function healPlayer() {
   currentPlayerHealth += heal_Value;
   writeToLog(
     LOG_EVENT_PLAYER_HEAL,
-    healValue,
+    heal_Value,
     "PLAYER WON",
     currentMonsterHealth,
     currentPlayerHealth
@@ -179,7 +196,38 @@ function healPlayer() {
 }
 
 function printLog() {
-  console.log(battleLog);
+  for (let i = 0; i < 3; i++) {
+    console.log("-------");
+  }
+
+  //  Same (while loop)
+  // let j = 0;
+  // while (j < 3) {
+  //   console.log("--------");
+  //   j++;
+  // }
+  // for (let i = 10; i > 0; i--) {
+  //   console.log(i);
+  // }
+  // console.log(battleLog);
+  // for (let i = 0; i < battleLog.length; i++) {
+  //   console.log(battleLog[i]);
+  // }
+
+  //Same (Only arrays)
+  let i = 0;
+  for (const logEntry of battleLog) {
+    if ((!lastLoggedEntry && lastLoggedEntry !== 0) || lastLoggedEntry < i) {
+      console.log(`#${i}`);
+      for (const key in logEntry) {
+        console.log(key);
+        console.log(`${key} => ${logEntry[key]}`);
+      }
+      lastLoggedEntry = i;
+      break;
+    }
+    i++;
+  }
 }
 attackBtn.addEventListener("click", attack);
 strongAttackBtn.addEventListener("click", strongAttack);
