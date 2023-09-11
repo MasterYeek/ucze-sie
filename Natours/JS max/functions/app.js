@@ -17,7 +17,7 @@ const getPlayerChoice = function () {
   ).toUpperCase();
   if (selection !== ROCK && selection !== PAPER && selection !== SCISSORS) {
     alert(`Invalid choice! We chose ${default_User_Choice}  for You`);
-    return default_User_Choice;
+    return;
   }
   return selection;
 };
@@ -40,7 +40,7 @@ const getComputerChoice = function () {
 //   return a + b;
 
 // Arrow Function
-const getWinner = (cChoice, pChoice) =>
+const getWinner = (cChoice, pChoice = default_User_Choice) =>
   cChoice === pChoice
     ? result_Draw
     : (cChoice === ROCK && pChoice === PAPER) ||
@@ -71,8 +71,15 @@ startGameBtn.addEventListener("click", () => {
   console.log("Game is starting..");
   const playerChoice = getPlayerChoice();
   const ComputerChoice = getComputerChoice();
-  const winner = getWinner(ComputerChoice, playerChoice);
-  let message = `You picked ${playerChoice}, computer picked ${ComputerChoice} therefore you `;
+  let winner;
+  if (playerChoice) {
+    winner = getWinner(ComputerChoice, playerChoice);
+  } else {
+    winner = getWinner(ComputerChoice, playerChoice);
+  }
+  let message = `You picked ${
+    playerChoice || default_User_Choice
+  }, computer picked ${ComputerChoice} therefore you `;
   if (winner === result_Draw) {
     message = message + "had a draw";
   } else if (winner === result_Player_win) {
@@ -98,3 +105,55 @@ startGameBtn.addEventListener("click", () => {
 // };
 
 // person.welcome();
+
+// not related to game
+
+const sumUp = (resultHandler, operation, ...numbers) => {
+  const validateNumber = (number) => {
+    return isNaN(number) ? 0 : number;
+  };
+  let sum = 0;
+  for (const num of numbers) {
+    if (operation === "ADD") {
+      sum += validateNumber(num);
+    } else {
+      sum -= validateNumber(num);
+    }
+    sum += validateNumber(num);
+  }
+  resultHandler(sum, "The result after adding all numbers is ");
+};
+//Same
+
+const subtractUp = function (resultHandler, ...numbers) {
+  let sum = 0;
+  for (const num of numbers) {
+    // dont use that
+    sum -= num;
+  }
+  resultHandler(sum);
+};
+const showResult = (messagetText, result) => {
+  alert(messagetText + " " + result);
+};
+
+sumUp(
+  showResult.bind(this, " the result after adding all the numbers is:"),
+  "ADD",
+  5,
+  10,
+  -3,
+  6,
+  10
+);
+sumUp(
+  showResult.bind(this, " the result after addaing all the numbers is:"),
+  5,
+  10,
+  -3,
+  6,
+  10,
+  25,
+  88
+);
+subtractUp(showResult, "SUBTRACT", 10, 15, 20);
