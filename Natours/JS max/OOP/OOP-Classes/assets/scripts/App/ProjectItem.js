@@ -1,4 +1,8 @@
-class ProjectItem {
+/* eslint-disable indent */
+import { DOMhelper } from "../utility/DOMhelper.js";
+// import { Tooltip } from "./Tooltip.js";
+
+export class ProjectItem {
   hasActiveTooltip = false;
 
   constructor(id, updateProjectLists, type) {
@@ -15,16 +19,17 @@ class ProjectItem {
     }
     const projectElement = document.getElementById(this.id);
     const toolTipText = projectElement.dataset.extraInfo;
-    projectElement.dataset.someinfo = "test";
-    const toolTip = new Tooltip(
-      () => {
-        this.hasActiveTooltip = false;
-      },
-      toolTipText,
-      this.id
-    );
-    toolTip.show();
-    this.hasActiveTooltip = true;
+    import("./Tooltip.js").then((module) => {
+      const toolTip = new module.toolTip(
+        () => {
+          this.hasActiveTooltip = false;
+        },
+        toolTipText,
+        this.id
+      );
+      toolTip.show();
+      this.hasActiveTooltip = true;
+    });
   }
 
   connectDrag() {
