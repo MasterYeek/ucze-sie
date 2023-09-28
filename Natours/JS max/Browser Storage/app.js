@@ -21,17 +21,16 @@ dbRequest.onerror = function (event) {
   console.log("Error");
 };
 storeBtn.addEventListener("click", () => {
-    if(!db){
-        return
-    }
+  if (!db) {
+    return;
+  }
   const db = event.target.result;
   const objStore = db.createObjectStore("products", { keyPath: "id" });
 
-    const productsStore = db
-      .transaction("products", "readwrite")
-      .objectStore("products");
-    productsStore.add({ id: "p3", title: "a Secound Product ", price: 122.99 });
-  };
-);
+  const productsStore = db
+    .transaction("products", "readwrite")
+    .objectStore("products");
+  productsStore.add({ id: "p3", title: "a Secound Product ", price: 122.99 });
+});
 
 retrBtn.addEventListener("click", () => {});
